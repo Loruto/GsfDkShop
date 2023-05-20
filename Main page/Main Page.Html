@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <title>Titlul paginii</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Acasă</a></li>
+        <li><a href="produse.html">Produse</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="dropdown">
+          <a href="google.com">Contul meu</a>
+          <div class="dropdown-content">
+		    <a id="home-link" href="#">Home</a>
+            <a id="logout-link" href="#">Log out</a>
+            <a href="file:///C:/Users/Lorut/OneDrive/Desktop/Site/Login/Login.html#">Login</a>
+            <a href="file:///C:/Users/Lorut/OneDrive/Desktop/Site/Sing%20In/Sing%20In.html#">Sing In</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <img id="product-image" src="a.png" alt="Produs 2">
+    <form id="search-form" onsubmit="search(event)">
+      <input type="text" id="search-input" placeholder="Cautați Produs">
+      <button type="submit">Caută</button>
+    </form>
+  </main>
+  
+  <script>
+  const productImage = document.getElementById("product-image");
+  productImage.addEventListener("click", () => {
+    productImage.classList.toggle("fullscreen");
+  });
+  const form = document.getElementById("search-form");
+const input = document.getElementById("search-input");
+
+form.addEventListener("submit", event => {
+  event.preventDefault(); // prevent form submission
+  const searchTerm = input.value.trim(); // get search term and trim whitespace
+  if (searchTerm) {
+    window.location.href = `https://example.com/search?term=${searchTerm}`;
+  }
+});
+
+</script>
+
+  <section class="promo">
+    <h2>Oferte speciale</h2>
+    <div class="promo-item">
+      <img src="Salam.jpg" alt="Produs 1">
+      <h3>Salam Victoria 800g</h3>
+      <p>19,99 Lei</p>
+      <a href="cumpara.html" class="btn">Cumpără acum</a>
+    </div>
+    <div class="promo-item">
+      <img src="Mititei.jpg" alt="Produs 2">
+      <h3>Mici Premia</h3>
+      <p>30,00</p>
+      <a href="cumpara.html" class="btn">Cumpără acum</a>
+    </div>
+    <div class="promo-item">
+      <img src="product3.jpg" alt="Produs 3">
+      <h3>Produs 3</h3>
+      <p>Descriere produs 3</p>
+      <a href="cumpara.html" class="btn">Cumpără acum</a>
+    </div>
+  </section>
+
+  <footer>
+    <nav>
+      <ul>
+        <li><a href="index.html">Acasă</a></li>
+        <li><a href="produse.html">Produse</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="footer-bottom">
+      <p>Drepturi de autor © 2023 Marketplace-ul produse alimentare romanesti.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
