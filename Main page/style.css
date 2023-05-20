@@ -158,3 +158,33 @@ footer {
 .footer-bottom p {
   margin: 0;
 }
+
+/* Mobile-specific styles */
+@media only screen and (max-width: 600px) {
+  header {
+    height: 150px; /* adjust the height for mobile */
+  }
+
+  nav ul {
+    justify-content: center; /* center the navigation items */
+  }
+
+  nav ul li {
+    margin: 0 5px; /* reduce the margin between navigation items */
+  }
+
+  form input {
+    width: 100%; /* make the search input full-width on mobile */
+    max-width: none; /* remove the maximum width */
+  }
+
+  .promo {
+    margin: 20px; /* reduce the margin for promo items on mobile */
+  }
+
+  .promo-item {
+    flex-basis: 100%; /* make promo items full-width on mobile */
+    margin: 10px 0; /* adjust the margin between promo items */
+  }
+}
+
