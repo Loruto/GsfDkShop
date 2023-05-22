@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Crează un cont</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="logo">
+      <img src="logo.png" alt="Logo">
+    </div>
+    <form id="signupForm" action="signup.php" method="post">
+      <h1 class="heading">Crează un Cont!</h1>
+      <input type="text" name="name" placeholder="Nume" autocomplete="off" required>
+      <input type="email" name="email" placeholder="Email" autocomplete="off" required>
+      <input type="password" name="password" placeholder="Parolă" autocomplete="off" required>
+      <button onclick="Register()">Crează</button>
+    </form>
+    <p id="message"></p>
+    <div class="links">
+      <a href="#" id="loginLink">Ai deja un cont? Intră în cont</a>
+    </div>
+  </div>
+
+<script type="module"  src="login.js"></script>
+
+</body>
+</html>
