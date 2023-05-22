@@ -19,10 +19,6 @@ import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
     measurementId: "G-VNBDEHJM6M"
   };
 
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const auth = getAuth();
